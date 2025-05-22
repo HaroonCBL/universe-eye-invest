@@ -7,14 +7,14 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
     --primary: 217.2 91.2% 59.8%; /* Electric blue */
     --primary-foreground: 0 0% 98%;
@@ -22,17 +22,17 @@
     --secondary: 252 27% 57.5%; /* Sci-Fi violet */
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.7% 46.9%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 10% 3.9%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
     --ring: 217.2 91.2% 59.8%;
 
     --radius: 0.6rem;
@@ -47,7 +47,6 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  /* Updating dark mode variables (used by default) */
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -94,7 +93,7 @@
   }
 
   body {
-    @apply bg-dark text-foreground font-sans;
+    @apply bg-background text-foreground font-sans;
   }
 
   html {
@@ -106,7 +105,7 @@
 /* Custom Classes */
 @layer components {
   .glass-card {
-    @apply bg-dark-card bg-opacity-70 backdrop-blur-lg border border-muted rounded-xl shadow-md;
+    @apply bg-white/70 backdrop-blur-lg border border-border rounded-xl shadow-md;
   }
   
   .glow-hover {
@@ -126,7 +125,7 @@
   }
   
   .btn-secondary {
-    @apply bg-transparent border border-violet hover:border-violet-hover text-white font-medium px-6 py-3 rounded-lg transition-all duration-300;
+    @apply bg-transparent border border-violet hover:border-violet-hover text-violet hover:text-violet-hover font-medium px-6 py-3 rounded-lg transition-all duration-300;
   }
 
   .tech-grid {
