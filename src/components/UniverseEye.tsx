@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Cube, Plus, Minus } from 'lucide-react';
+import { Server, Plus, Minus } from 'lucide-react';
 
 const UniverseEye = () => {
   return (
@@ -24,7 +24,7 @@ const UniverseEye = () => {
             </p>
             
             <Button className="btn-primary flex items-center gap-2">
-              <Cube className="w-5 h-5" />
+              <Server className="w-5 h-5" />
               Launch Universe Eye
             </Button>
           </div>

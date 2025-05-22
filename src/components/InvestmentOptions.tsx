@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Cpu, Network, Bot, CubeIcon } from 'lucide-react';
+import { Cpu, Network, Server, Database } from 'lucide-react';
 
 const investmentOptions = [
   {
@@ -17,12 +17,12 @@ const investmentOptions = [
   {
     title: 'Realtime AI Model Hosting',
     description: 'Deploy and scale AI models with guaranteed compute resources.',
-    icon: <Bot className="w-10 h-10 text-electric" />
+    icon: <Server className="w-10 h-10 text-electric" />
   },
   {
     title: 'Immersive 3D Infrastructure',
     description: 'Explore your infrastructure in our interactive 3D environment.',
-    icon: <CubeIcon className="w-10 h-10 text-electric" />
+    icon: <Database className="w-10 h-10 text-electric" />
   }
 ];
 

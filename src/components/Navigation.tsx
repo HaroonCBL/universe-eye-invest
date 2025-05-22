@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Bell, Globe, Home, HelpCircle, Cube, LineChart } from "lucide-react";
+import { Menu, X, Bell, Globe, Home, HelpCircle, Server, LineChart } from "lucide-react";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,7 +31,7 @@ const Navigation = () => {
               <HelpCircle className="w-4 h-4" /> How It Works
             </a>
             <a href="#universe-eye" className="text-gray-400 hover:text-foreground transition-colors flex items-center gap-1">
-              <Cube className="w-4 h-4" /> Universe Eye
+              <Server className="w-4 h-4" /> Universe Eye
             </a>
             <a href="#dashboard" className="text-gray-400 hover:text-foreground transition-colors flex items-center gap-1">
               <LineChart className="w-4 h-4" /> Dashboard
@@ -79,7 +79,7 @@ const Navigation = () => {
               <HelpCircle className="w-4 h-4" /> How It Works
             </a>
             <a href="#universe-eye" className="block text-gray-400 hover:text-foreground transition-colors py-2 flex items-center gap-2">
-              <Cube className="w-4 h-4" /> Universe Eye
+              <Server className="w-4 h-4" /> Universe Eye
             </a>
             <a href="#dashboard" className="block text-gray-400 hover:text-foreground transition-colors py-2 flex items-center gap-2">
               <LineChart className="w-4 h-4" /> Dashboard
