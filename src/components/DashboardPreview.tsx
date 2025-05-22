@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { LineChart, BarChart4, Database, Server } from 'lucide-react';
 
 const DashboardPreview = () => {
   return (
@@ -30,7 +31,9 @@ const DashboardPreview = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
               {/* Earnings Card */}
               <div className="glass-card p-6">
-                <h3 className="text-lg font-medium text-gray-300 mb-2">Live Earnings</h3>
+                <h3 className="text-lg font-medium text-gray-300 mb-2 flex items-center gap-2">
+                  <LineChart className="w-5 h-5 text-electric" /> Live Earnings
+                </h3>
                 <div className="flex items-center space-x-2">
                   <span className="text-3xl font-bold text-white">$1,248.67</span>
                   <span className="text-green-400 text-sm">+2.4%</span>
@@ -56,7 +59,9 @@ const DashboardPreview = () => {
               
               {/* NFT Ownership */}
               <div className="glass-card p-6">
-                <h3 className="text-lg font-medium text-gray-300 mb-4">NFT Ownership</h3>
+                <h3 className="text-lg font-medium text-gray-300 mb-4 flex items-center gap-2">
+                  <Database className="w-5 h-5 text-electric" /> NFT Ownership
+                </h3>
                 <div className="flex items-center space-x-4">
                   <div className="h-20 w-20 rounded bg-gradient-to-br from-electric to-violet p-0.5">
                     <div className="h-full w-full rounded bg-dark-accent flex items-center justify-center">
@@ -82,7 +87,9 @@ const DashboardPreview = () => {
               
               {/* Transaction Log */}
               <div className="glass-card p-6 col-span-1 md:col-span-2">
-                <h3 className="text-lg font-medium text-gray-300 mb-4">Blockchain Transaction Log</h3>
+                <h3 className="text-lg font-medium text-gray-300 mb-4 flex items-center gap-2">
+                  <BarChart4 className="w-5 h-5 text-electric" /> Blockchain Transaction Log
+                </h3>
                 <div className="space-y-3">
                   {[1, 2, 3].map((item) => (
                     <div key={item} className="flex justify-between items-center py-2 border-b border-muted/50">
@@ -101,7 +108,8 @@ const DashboardPreview = () => {
             </div>
             
             <div className="flex justify-center p-6 pt-2">
-              <Button className="btn-primary">
+              <Button className="btn-primary flex items-center gap-2">
+                <Server className="w-5 h-5" />
                 Explore Full Dashboard
               </Button>
             </div>

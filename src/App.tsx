@@ -12,8 +12,8 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
-    // Remove dark mode class if it exists
-    document.documentElement.classList.remove('dark');
+    // Enable dark mode
+    document.documentElement.classList.add('dark');
   }, []);
 
   return (

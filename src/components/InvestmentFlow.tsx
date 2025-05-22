@@ -1,38 +1,47 @@
 
 import React from 'react';
+import { UserCheck, ShieldCheck, Wallet, CreditCard, Percent, Tag, BarChart4, LineChart } from 'lucide-react';
 
 const timelineSteps = [
   {
     title: 'Sign up + OTP verification',
-    description: 'Create your account and verify your identity with a one-time password.'
+    description: 'Create your account and verify your identity with a one-time password.',
+    icon: <UserCheck className="w-6 h-6 text-electric" />
   },
   {
     title: 'KYC (Tier 1 & 2)',
-    description: 'Complete our Know Your Customer process to comply with regulations.'
+    description: 'Complete our Know Your Customer process to comply with regulations.',
+    icon: <ShieldCheck className="w-6 h-6 text-electric" />
   },
   {
     title: 'Wallet connection',
-    description: 'Connect your cryptocurrency wallet to receive your NFT and future earnings.'
+    description: 'Connect your cryptocurrency wallet to receive your NFT and future earnings.',
+    icon: <Wallet className="w-6 h-6 text-electric" />
   },
   {
     title: 'Choose fiat or crypto',
-    description: 'Select your preferred payment method - traditional currency or cryptocurrency.'
+    description: 'Select your preferred payment method - traditional currency or cryptocurrency.',
+    icon: <CreditCard className="w-6 h-6 text-electric" />
   },
   {
     title: 'Pick % of data center',
-    description: 'Choose how much of the data center infrastructure you want to own.'
+    description: 'Choose how much of the data center infrastructure you want to own.',
+    icon: <Percent className="w-6 h-6 text-electric" />
   },
   {
     title: 'NFT minted = Ownership confirmed',
-    description: 'Receive your NFT representing your ownership stake in the infrastructure.'
+    description: 'Receive your NFT representing your ownership stake in the infrastructure.',
+    icon: <Tag className="w-6 h-6 text-electric" />
   },
   {
     title: 'Revenue flows in automatically',
-    description: 'Start earning revenue from your infrastructure investment.'
+    description: 'Start earning revenue from your infrastructure investment.',
+    icon: <BarChart4 className="w-6 h-6 text-electric" />
   },
   {
     title: 'Track live earnings in dashboard',
-    description: 'Monitor your earnings and infrastructure performance in real-time.'
+    description: 'Monitor your earnings and infrastructure performance in real-time.',
+    icon: <LineChart className="w-6 h-6 text-electric" />
   }
 ];
 
@@ -54,8 +63,9 @@ const InvestmentFlow = () => {
               <div key={index} className="timeline-step">
                 <div className="dot animate-pulse-glow"></div>
                 <div className="timeline-content">
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    Step {index + 1}: {step.title}
+                  <h3 className="text-xl font-semibold text-white mb-2 flex items-center gap-2">
+                    {step.icon}
+                    <span>Step {index + 1}: {step.title}</span>
                   </h3>
                   <p className="text-gray-400">{step.description}</p>
                 </div>

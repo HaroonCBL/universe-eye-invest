@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Cube, Plus, Minus } from 'lucide-react';
 
 const UniverseEye = () => {
   return (
@@ -22,7 +23,8 @@ const UniverseEye = () => {
               Our interactive 3D view lets you experience your investment like never before.
             </p>
             
-            <Button className="btn-primary">
+            <Button className="btn-primary flex items-center gap-2">
+              <Cube className="w-5 h-5" />
               Launch Universe Eye
             </Button>
           </div>
@@ -58,12 +60,12 @@ const UniverseEye = () => {
                   <div className="flex space-x-2">
                     <div className="glass-card p-1 rounded-full">
                       <div className="h-6 w-6 rounded-full bg-electric flex items-center justify-center">
-                        <span className="text-white text-xs">+</span>
+                        <Plus className="w-3 h-3 text-white" />
                       </div>
                     </div>
                     <div className="glass-card p-1 rounded-full">
                       <div className="h-6 w-6 rounded-full bg-dark-accent flex items-center justify-center">
-                        <span className="text-white text-xs">−</span>
+                        <Minus className="w-3 h-3 text-white" />
                       </div>
                     </div>
                   </div>

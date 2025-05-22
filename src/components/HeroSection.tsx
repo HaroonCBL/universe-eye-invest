@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { MonitorSmartphone, PlayCircle, ChevronDown, Server, Database, Cpu, Globe } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -11,6 +12,20 @@ const HeroSection = () => {
       {/* Animated glowing orbs */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-electric opacity-10 blur-3xl animate-pulse z-0"></div>
       <div className="absolute bottom-1/4 right-1/3 w-80 h-80 rounded-full bg-violet opacity-10 blur-3xl animate-pulse z-0"></div>
+      
+      {/* Floating tech icons */}
+      <div className="absolute top-1/3 right-1/4 animate-float z-0">
+        <Server className="w-10 h-10 text-electric opacity-20" />
+      </div>
+      <div className="absolute bottom-1/3 left-1/4 animate-float z-0" style={{ animationDelay: "1s" }}>
+        <Database className="w-10 h-10 text-violet opacity-20" />
+      </div>
+      <div className="absolute top-2/4 right-1/3 animate-float z-0" style={{ animationDelay: "2s" }}>
+        <Cpu className="w-12 h-12 text-electric opacity-20" />
+      </div>
+      <div className="absolute bottom-2/5 left-1/3 animate-float z-0" style={{ animationDelay: "3s" }}>
+        <Globe className="w-10 h-10 text-violet opacity-20" />
+      </div>
       
       <div className="container mx-auto px-4 py-12 md:py-24 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
@@ -25,11 +40,13 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <Button className="btn-primary text-lg py-6 px-10" onClick={() => document.getElementById('investment-flow')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button className="btn-primary text-lg py-6 px-10 flex items-center gap-2" onClick={() => document.getElementById('investment-flow')?.scrollIntoView({ behavior: 'smooth' })}>
+              <MonitorSmartphone className="w-5 h-5" />
               Start Investing
             </Button>
             
-            <Button variant="outline" className="btn-secondary text-lg py-6 px-10">
+            <Button variant="outline" className="btn-secondary text-lg py-6 px-10 flex items-center gap-2">
+              <PlayCircle className="w-5 h-5" />
               Watch Intro Video
             </Button>
           </div>
@@ -37,9 +54,7 @@ const HeroSection = () => {
           <div className="mt-16 flex items-center justify-center">
             <div className="flex space-x-2 items-center animate-bounce">
               <span className="text-gray-400">Scroll to discover</span>
-              <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
+              <ChevronDown className="w-5 h-5 text-gray-400" />
             </div>
           </div>
         </div>

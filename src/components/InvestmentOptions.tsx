@@ -1,27 +1,28 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Cpu, Network, Bot, CubeIcon } from 'lucide-react';
 
 const investmentOptions = [
   {
     title: 'NVIDIA A100 / H100 GPUs',
     description: 'State-of-the-art accelerated computing for AI and HPC workloads.',
-    icon: '🖥️'
+    icon: <Cpu className="w-10 h-10 text-electric" />
   },
   {
     title: 'InfiniBand 400Gbps Networking',
     description: 'Ultra-low latency, high-throughput networking for distributed AI.',
-    icon: '🔗'
+    icon: <Network className="w-10 h-10 text-electric" />
   },
   {
     title: 'Realtime AI Model Hosting',
     description: 'Deploy and scale AI models with guaranteed compute resources.',
-    icon: '🤖'
+    icon: <Bot className="w-10 h-10 text-electric" />
   },
   {
     title: 'Immersive 3D Infrastructure',
     description: 'Explore your infrastructure in our interactive 3D environment.',
-    icon: '🔍'
+    icon: <CubeIcon className="w-10 h-10 text-electric" />
   }
 ];
 
@@ -40,7 +41,7 @@ const InvestmentOptions = () => {
           {investmentOptions.map((option, index) => (
             <Card key={index} className="glass-card overflow-hidden glow-hover group">
               <CardContent className="p-6 h-full flex flex-col">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{option.icon}</div>
+                <div className="mb-4 group-hover:scale-110 transition-transform">{option.icon}</div>
                 <h3 className="text-xl font-bold mb-2 text-white group-hover:text-electric transition-colors">{option.title}</h3>
                 <p className="text-gray-400 flex-grow">{option.description}</p>
                 <div className="h-1 w-0 group-hover:w-full bg-gradient-to-r from-electric to-violet mt-4 transition-all duration-500"></div>

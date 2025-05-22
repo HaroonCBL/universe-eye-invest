@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Bell, Globe } from "lucide-react";
+import { Menu, X, Bell, Globe, Home, HelpCircle, Cube, LineChart } from "lucide-react";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,11 +24,19 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#" className="text-gray-600 hover:text-foreground transition-colors">Home</a>
-            <a href="#how-it-works" className="text-gray-600 hover:text-foreground transition-colors">How It Works</a>
-            <a href="#universe-eye" className="text-gray-600 hover:text-foreground transition-colors">Universe Eye</a>
-            <a href="#dashboard" className="text-gray-600 hover:text-foreground transition-colors">Dashboard</a>
-            <a href="#faq" className="text-gray-600 hover:text-foreground transition-colors">FAQ</a>
+            <a href="#" className="text-gray-400 hover:text-foreground transition-colors flex items-center gap-1">
+              <Home className="w-4 h-4" /> Home
+            </a>
+            <a href="#how-it-works" className="text-gray-400 hover:text-foreground transition-colors flex items-center gap-1">
+              <HelpCircle className="w-4 h-4" /> How It Works
+            </a>
+            <a href="#universe-eye" className="text-gray-400 hover:text-foreground transition-colors flex items-center gap-1">
+              <Cube className="w-4 h-4" /> Universe Eye
+            </a>
+            <a href="#dashboard" className="text-gray-400 hover:text-foreground transition-colors flex items-center gap-1">
+              <LineChart className="w-4 h-4" /> Dashboard
+            </a>
+            <a href="#faq" className="text-gray-400 hover:text-foreground transition-colors">FAQ</a>
           </nav>
           
           {/* Account, Language and Notifications */}
@@ -64,11 +72,19 @@ const Navigation = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-background border-t border-border">
           <div className="container mx-auto px-4 pt-2 pb-4 space-y-3">
-            <a href="#" className="block text-gray-600 hover:text-foreground transition-colors py-2">Home</a>
-            <a href="#how-it-works" className="block text-gray-600 hover:text-foreground transition-colors py-2">How It Works</a>
-            <a href="#universe-eye" className="block text-gray-600 hover:text-foreground transition-colors py-2">Universe Eye</a>
-            <a href="#dashboard" className="block text-gray-600 hover:text-foreground transition-colors py-2">Dashboard</a>
-            <a href="#faq" className="block text-gray-600 hover:text-foreground transition-colors py-2">FAQ</a>
+            <a href="#" className="block text-gray-400 hover:text-foreground transition-colors py-2 flex items-center gap-2">
+              <Home className="w-4 h-4" /> Home
+            </a>
+            <a href="#how-it-works" className="block text-gray-400 hover:text-foreground transition-colors py-2 flex items-center gap-2">
+              <HelpCircle className="w-4 h-4" /> How It Works
+            </a>
+            <a href="#universe-eye" className="block text-gray-400 hover:text-foreground transition-colors py-2 flex items-center gap-2">
+              <Cube className="w-4 h-4" /> Universe Eye
+            </a>
+            <a href="#dashboard" className="block text-gray-400 hover:text-foreground transition-colors py-2 flex items-center gap-2">
+              <LineChart className="w-4 h-4" /> Dashboard
+            </a>
+            <a href="#faq" className="block text-gray-400 hover:text-foreground transition-colors py-2">FAQ</a>
             
             <div className="pt-2 flex items-center space-x-3">
               <Button variant="outline" size="sm" className="border-violet text-violet hover:bg-violet hover:text-white transition-colors">

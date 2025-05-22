@@ -2,27 +2,28 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { FileText, Eye, Lock, Link } from 'lucide-react';
 
 const benefits = [
   {
     title: 'Smart Contract Revenue Sharing',
     description: 'Automatic revenue distribution based on your ownership percentage.',
-    icon: '📝'
+    icon: <FileText className="w-10 h-10 text-violet" />
   },
   {
     title: 'Transparent Transactions',
     description: 'All transactions are recorded on the blockchain for complete transparency.',
-    icon: '👁️'
+    icon: <Eye className="w-10 h-10 text-violet" />
   },
   {
     title: 'GDPR/GCC Compliance',
     description: 'Fully compliant with global data protection regulations.',
-    icon: '🔒'
+    icon: <Lock className="w-10 h-10 text-violet" />
   },
   {
     title: 'NFT-backed Fractional Ownership',
     description: 'Your ownership is secured by NFTs on the blockchain.',
-    icon: '🔗'
+    icon: <Link className="w-10 h-10 text-violet" />
   }
 ];
 
@@ -42,7 +43,7 @@ const BlockchainBenefits = () => {
           {benefits.map((benefit, index) => (
             <Card key={index} className="glass-card glow-violet-hover">
               <CardContent className="p-6">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
+                <div className="mb-4 flex justify-center">{benefit.icon}</div>
                 <h3 className="text-xl font-bold mb-2 text-white">{benefit.title}</h3>
                 <p className="text-gray-400">{benefit.description}</p>
               </CardContent>

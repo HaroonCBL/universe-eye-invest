@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Wallet, LineChart } from 'lucide-react';
 
 const FinalCTA = () => {
   return (
@@ -28,11 +29,13 @@ const FinalCTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-primary text-lg py-6 px-10">
+            <Button className="btn-primary text-lg py-6 px-10 flex items-center gap-2">
+              <Wallet className="w-5 h-5" />
               Get Started with $500
             </Button>
             
-            <Button variant="outline" className="btn-secondary text-lg py-6 px-10">
+            <Button variant="outline" className="btn-secondary text-lg py-6 px-10 flex items-center gap-2">
+              <LineChart className="w-5 h-5" />
               View Demo Dashboard
             </Button>
           </div>
