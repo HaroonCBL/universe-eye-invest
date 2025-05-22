@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,20 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+                // Custom colors for our theme
+                electric: {
+                    DEFAULT: '#0070F3',
+                    hover: '#0054B4'
+                },
+                violet: {
+                    DEFAULT: '#6E56CF',
+                    hover: '#5A46B0'
+                },
+                dark: {
+                    DEFAULT: '#050505',
+                    card: '#111111',
+                    accent: '#1A1A1A'
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +89,54 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'pulse-glow': {
+                    '0%, 100%': { 
+                        boxShadow: '0 0 10px rgba(110, 86, 207, 0.3)' 
+                    },
+                    '50%': { 
+                        boxShadow: '0 0 20px rgba(110, 86, 207, 0.6)' 
+                    }
+                },
+                'data-flow': {
+                    '0%': { 
+                        backgroundPosition: '0% 50%' 
+                    },
+                    '100%': { 
+                        backgroundPosition: '100% 50%' 
+                    }
+                },
+                'float': {
+                    '0%, 100%': { 
+                        transform: 'translateY(0)' 
+                    },
+                    '50%': { 
+                        transform: 'translateY(-10px)' 
+                    }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'pulse-glow': 'pulse-glow 3s infinite',
+                'data-flow': 'data-flow 15s linear infinite',
+                'float': 'float 6s ease-in-out infinite'
+			},
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'hero-pattern': "url('/hero-bg.png')",
+                'data-grid': "linear-gradient(to right, rgba(110, 86, 207, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(110, 86, 207, 0.1) 1px, transparent 1px)",
+            },
+            boxShadow: {
+                'glow-sm': '0 0 10px rgba(0, 112, 243, 0.4)',
+                'glow-md': '0 0 15px rgba(0, 112, 243, 0.5)',
+                'glow-lg': '0 0 25px rgba(0, 112, 243, 0.6)',
+                'glow-violet': '0 0 15px rgba(110, 86, 207, 0.5)',
+            },
+            backdropFilter: {
+                'none': 'none',
+                'blur': 'blur(20px)',
+            },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
