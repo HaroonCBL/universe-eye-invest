@@ -12,10 +12,32 @@ const DashboardPreview = () => {
       <div className="absolute top-1/4 right-1/4 w-72 h-72 rounded-full bg-electric opacity-5 blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-white">Live Dashboard Preview</h2>
-        <p className="text-xl text-gray-300 mb-12 text-center max-w-2xl mx-auto">
-          Monitor your infrastructure investments and earnings in real-time.
-        </p>
+        <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
+          <div className="lg:w-1/2">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Live Dashboard Preview</h2>
+            <p className="text-xl text-gray-300 mb-6">
+              Monitor your infrastructure investments and earnings in real-time.
+            </p>
+            <p className="text-gray-400 mb-8">
+              Our comprehensive dashboard gives you complete visibility into your AI infrastructure performance, revenue generation, and utilization metrics, all secured by blockchain technology.
+            </p>
+            <Button className="btn-primary flex items-center gap-2">
+              <LineChart className="w-5 h-5" />
+              Try Demo Dashboard
+            </Button>
+          </div>
+          
+          <div className="lg:w-1/2">
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" 
+                alt="Analytics Dashboard" 
+                className="rounded-lg shadow-glow-md border border-electric/30 relative z-10"
+              />
+              <div className="absolute -bottom-4 -left-4 w-full h-full bg-gradient-to-r from-electric to-violet opacity-20 rounded-lg blur-md -z-0"></div>
+            </div>
+          </div>
+        </div>
         
         <div className="max-w-5xl mx-auto">
           <Card className="bg-dark-card border border-muted rounded-xl overflow-hidden shadow-glow-sm">

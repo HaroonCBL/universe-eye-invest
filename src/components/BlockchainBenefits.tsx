@@ -34,10 +34,28 @@ const BlockchainBenefits = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-data-grid opacity-10 z-0"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-white">Why Blockchain Ownership?</h2>
-        <p className="text-xl text-gray-300 mb-12 text-center max-w-2xl mx-auto">
-          Leveraging blockchain technology for transparent, secure, and efficient infrastructure ownership.
-        </p>
+        <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
+          <div className="lg:w-1/2">
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1639322537231-2f206e06af84?q=80&w=1000&auto=format&fit=crop" 
+                alt="Blockchain Technology" 
+                className="rounded-lg shadow-glow-violet border border-violet/30 relative z-10"
+              />
+              <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-to-r from-violet to-electric opacity-20 rounded-lg blur-md -z-0"></div>
+            </div>
+          </div>
+          
+          <div className="lg:w-1/2">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Why Blockchain Ownership?</h2>
+            <p className="text-xl text-gray-300 mb-6">
+              Leveraging blockchain technology for transparent, secure, and efficient infrastructure ownership.
+            </p>
+            <p className="text-gray-400 mb-8">
+              With blockchain-based ownership, you get immutable proof of your investment, automatic revenue distribution, and the ability to trade your share at any time without intermediaries.
+            </p>
+          </div>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {benefits.map((benefit, index) => (

@@ -32,49 +32,32 @@ const UniverseEye = () => {
           {/* 3D Preview Image */}
           <div className="lg:w-1/2">
             <div className="relative">
-              {/* Main image with glow effect */}
-              <div className="rounded-lg overflow-hidden shadow-glow-lg bg-dark-accent border border-violet p-2">
-                <div className="aspect-[16/9] bg-gradient-to-br from-dark-accent to-dark rounded-md flex flex-col items-center justify-center">
-                  {/* 3D server representation */}
-                  <div className="grid grid-cols-3 gap-3 max-w-xs animate-float">
-                    {[...Array(9)].map((_, i) => (
-                      <div 
-                        key={i}
-                        className="h-8 w-full bg-gradient-to-r from-electric to-violet rounded-sm flex items-center justify-center"
-                      >
-                        <div className="h-6 w-10/12 bg-dark-card rounded-sm flex items-center justify-center">
-                          <div className="h-1 w-4 bg-electric rounded-full animate-pulse"></div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <p className="text-sm text-gray-400 mt-4">Interactive 3D Preview</p>
+              <img 
+                src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1000&auto=format&fit=crop" 
+                alt="3D Infrastructure Visualization" 
+                className="rounded-lg shadow-glow-violet border border-violet/30 relative z-10"
+              />
+              <div className="absolute -top-4 -left-4 h-24 w-24 rounded-lg border border-violet/20 bg-dark-accent animate-pulse-glow"></div>
+              <div className="absolute -bottom-4 -right-4 h-16 w-16 rounded-lg border border-electric/20 bg-dark-accent animate-pulse-glow"></div>
+              
+              {/* Control overlay */}
+              <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center">
+                <div className="glass-card px-3 py-1 text-xs text-gray-300 rounded-full">
+                  Rack #24 • GCC-01
                 </div>
-                
-                {/* Control overlay */}
-                <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center">
-                  <div className="glass-card px-3 py-1 text-xs text-gray-300 rounded-full">
-                    Rack #24 • GCC-01
-                  </div>
-                  <div className="flex space-x-2">
-                    <div className="glass-card p-1 rounded-full">
-                      <div className="h-6 w-6 rounded-full bg-electric flex items-center justify-center">
-                        <Plus className="w-3 h-3 text-white" />
-                      </div>
+                <div className="flex space-x-2">
+                  <div className="glass-card p-1 rounded-full">
+                    <div className="h-6 w-6 rounded-full bg-electric flex items-center justify-center">
+                      <Plus className="w-3 h-3 text-white" />
                     </div>
-                    <div className="glass-card p-1 rounded-full">
-                      <div className="h-6 w-6 rounded-full bg-dark-accent flex items-center justify-center">
-                        <Minus className="w-3 h-3 text-white" />
-                      </div>
+                  </div>
+                  <div className="glass-card p-1 rounded-full">
+                    <div className="h-6 w-6 rounded-full bg-dark-accent flex items-center justify-center">
+                      <Minus className="w-3 h-3 text-white" />
                     </div>
                   </div>
                 </div>
               </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 h-12 w-12 rounded-lg border border-violet bg-dark-accent animate-pulse-glow"></div>
-              <div className="absolute -bottom-4 -left-4 h-8 w-8 rounded-lg border border-electric bg-dark-accent animate-pulse-glow"></div>
             </div>
           </div>
         </div>
